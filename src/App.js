@@ -1,4 +1,5 @@
-
+import firebase from "firebase/app";
+import "firebase/auth";
 import './App.css';
 import {
   BrowserRouter as Router,

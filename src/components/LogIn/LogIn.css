@@ -1,7 +1,15 @@
-.googlebtn{
+.googlebtn button{
   
-width:50%;
+width:35%;
 border-radius: 10px;
-color:blue;
+color:white;
+background-color: black;
    
+}
+.form-design input{
+    width:35%;
+    margin-top: 10px;
+}
+.submitBtn{
+    background-color: cyan;
 }

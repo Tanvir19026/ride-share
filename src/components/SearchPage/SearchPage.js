@@ -15,19 +15,21 @@ const SearchPage = (props) => {
 
     
     return (
-         <Link style={{textDecoration:'none'}} to={`/Destination/${name}`}>
+        
           <div>
         <div className="col-md-3  mt-5 container">
             <Card style={style}> 
                 <Card.Body>
+                <Link style={{textDecoration:'none'}} to={`/Destination/${name}`}>
                 <Card.Img style={{width:'90%',marginLeft:'20px'}} src={image} />
                     <Card.Title style={{textAlign:'center'}}>{name}</Card.Title>
+                    </Link>
                 </Card.Body>
             </Card>
         </div>
         </div>
 
-         </Link>
+       
     );
 };
 
