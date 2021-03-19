@@ -2,7 +2,7 @@
     {
       "id": 1,
       "name": "Bike",
-    "image":"https://i.ibb.co/YBrCbsj/Frame.png"
+    "image":"https://i.postimg.cc/PNdv1kPx/Frame.png"
     },
 
 
@@ -10,18 +10,18 @@
     {
       "id": 2,
       "name": "Bus",
-      "image":"https://i.ibb.co/6ws2WTr/Frame-1.png"
+      "image":"https://i.postimg.cc/wRMGmmhY/Frame-1.png"
       
     },
     {
       "id": 3,
       "name": "Train",
-       "image":"https://i.ibb.co/JpCT7V4/Group.png"
+       "image":"https://i.postimg.cc/t1VRhsNP/Group.png"
     },
     {
       "id": 4,
       "name": "Car",
-      "image":"https://i.ibb.co/dKLBHFV/Frame-2.png"
+      "image":"https://i.postimg.cc/c63YsHqv/Frame-2.png"
     
     }
 ]

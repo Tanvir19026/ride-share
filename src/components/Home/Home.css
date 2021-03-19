@@ -1,0 +1,17 @@
+.bcImage{
+    
+    background-image: url('../../Bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.header h1 {
+    color:black;
+    text-shadow: 4px 4px 4px red;
+    padding-left:43px;
+    padding-top: 10px;
+}
+.nav {
+    margin-right: 10px;
+}
+
