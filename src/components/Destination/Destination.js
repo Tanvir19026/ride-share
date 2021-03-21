@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import Data from '../../fakeData/Data.json';
 import { Form, Button } from 'react-bootstrap';
@@ -7,23 +7,26 @@ import './Destination.css';
 import peopleIcon from '../../peopleicon.png';
 
 
-const Destination = () => {
-
+const Destination = (props) => {
+    const { ticketType } = useParams();
+    const vehicles = Data;
     const [loggedInUser, setloggedInUser] = useContext(UserContext);
     const [data, setData] = useState([]);
     const [input, setInput] = useState('');
     const [input2, setInput2] = useState('');
     const [show, setShow] = useState(true);
-    const vehicles = Data;
-    const { ticketType } = useParams();
+    
+    
+
     useEffect(() => {
         setData(vehicles);
+        // console.log(vehicles);
 
     }, [data]);
 
-    var index = data.findIndex(item => item.ticketType === item.ticketType)
-    const picture = (data[index]);
-
+     var index =  data.findIndex(item => item.ticketType === item.ticketType);
+     const picture=(data[index]);
+   
    
 
 
@@ -48,10 +51,10 @@ const Destination = () => {
                             <h2>{input2}</h2>
                         </div>
                     }
-                    
-                    <label for="time">Shedule:</label>
-                        <input type="datetime-local" id="time" name="time"></input><br></br>
-                    <button onClick={() => setShow(!show)} >Search</button>
+                  
+                  <label for="time">Shedule:</label>
+                        <input style={{width:'220px'}} type="datetime-local" id="time" name="time"></input><br></br>
+                    <button style={{marginBottom:'10px'}} onClick={() => setShow(!show)} >Search</button>
                     <br></br>
                     <div className="d-flex  ticket-design" >
                         
@@ -66,12 +69,53 @@ const Destination = () => {
                      show ? '':<p style={{marginRight:'10px'}}>{picture.passenger}</p>   
                     }
                     {
-                        show?'':<h6>ticket :BDT{picture.ticket}</h6>
+                       show?'':<h6>ticket :BDT{picture.ticket}</h6>
                     }
+
                     
                    
                   
                     </div>
+                  <div className="d-flex  ticket-design mt-2" >
+                        
+                        {
+                           show ? '' : <img height="70" width="120" src={picture.image} /> 
+                            
+                        }
+                        {
+                           show ? '':<img height="40" width="40" src={peopleIcon}/>
+                        }
+                        {
+                         show ? '':<p style={{marginRight:'10px'}}>{picture.passenger}</p>   
+                        }
+                        {
+                          show?'':<h6>ticket :BDT{picture.ticket}</h6>
+                        }
+     
+                        
+                       
+                      
+                         </div>
+                        <div className="d-flex  ticket-design mt-2" >
+                        
+                        {
+                          show ? '' : <img height="70" width="120" src={picture.image} /> 
+                            
+                        }
+                        {
+                         show ? '':<img height="40" width="40" src={peopleIcon}/>
+                        }
+                        {
+                        show ? '':<p style={{marginRight:'10px'}}>{picture.passenger}</p>   
+                        }
+                        {
+                         show?'':<h6>ticket :BDT{picture.ticket}</h6>
+                        }
+    
+                        
+                       
+                      
+                        </div> 
                 </div>
                <div className="col-md-4 googleMap">
                    <iframe width="400" height="300" frameborder="0" scrolling="no"

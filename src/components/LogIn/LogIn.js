@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import firebaseConfig from '../firebase.config';
 import firebase from "firebase/app";
 import "firebase/auth";
-import { useHistory, useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 import './LogIn.css'

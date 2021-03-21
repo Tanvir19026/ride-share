@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const SearchPage = (props) => {
 
@@ -12,7 +12,8 @@ const SearchPage = (props) => {
      color:'white',
      borderRadius:'10px'
     }
-  
+
+   
     
     return (
         

@@ -1,4 +1,15 @@
 [
+
+
+
+  {
+    "id": 2,
+    "name": "Bus",
+    "passenger":50,
+    "image":"https://i.postimg.cc/wRMGmmhY/Frame-1.png",
+    "ticket":100,
+    "ticketType": "Bus"
+  },
     {
       "id": 1,
       "name": "Bike",
@@ -10,14 +21,7 @@
     
 
      
-    {
-      "id": 2,
-      "name": "Bus",
-      "passenger":50,
-      "image":"https://i.postimg.cc/wRMGmmhY/Frame-1.png",
-      "ticket":100,
-      "ticketType": "Bus"
-    },
+    
     {
       "id": 3,
       "name": "Train",
