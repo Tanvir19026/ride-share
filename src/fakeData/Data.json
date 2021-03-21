@@ -2,26 +2,37 @@
     {
       "id": 1,
       "name": "Bike",
-    "image":"https://i.postimg.cc/PNdv1kPx/Frame.png"
+    "image":"https://i.postimg.cc/PNdv1kPx/Frame.png",
+      "ticket":69,
+      "passenger":2,
+      "ticketType": "Bike"
     },
-
+    
 
      
     {
       "id": 2,
       "name": "Bus",
-      "image":"https://i.postimg.cc/wRMGmmhY/Frame-1.png"
-      
+      "passenger":50,
+      "image":"https://i.postimg.cc/wRMGmmhY/Frame-1.png",
+      "ticket":100,
+      "ticketType": "Bus"
     },
     {
       "id": 3,
       "name": "Train",
-       "image":"https://i.postimg.cc/t1VRhsNP/Group.png"
+       "image":"https://i.postimg.cc/t1VRhsNP/Group.png",
+       "ticket":150,
+       "passenger":100,
+       "ticketType":"Train"
     },
     {
       "id": 4,
       "name": "Car",
-      "image":"https://i.postimg.cc/c63YsHqv/Frame-2.png"
+      "image":"https://i.postimg.cc/c63YsHqv/Frame-2.png",
+      "ticket":200,
+      "passenger":4,
+      "ticketType": "Car"
     
     }
 ]

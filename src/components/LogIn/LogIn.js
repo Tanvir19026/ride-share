@@ -9,7 +9,9 @@ import { UserContext } from '../../App';
 import './LogIn.css'
 
 const LogIn = () => {
-
+  const history = useHistory();
+  const location = useLocation();
+  const { from } = location.state || { from: { pathname: "/" } };
     
     const [loggedInUser, setloggedInUser] = useContext(UserContext);
     const googleprovider = new firebase.auth.GoogleAuthProvider();
@@ -40,7 +42,7 @@ const LogIn = () => {
             }
             setUser(signedInUser);
             setloggedInUser(signedInUser);
-            // history.replace(from);
+            history.replace(from);
            
           })
     
@@ -136,7 +138,14 @@ const LogIn = () => {
         user.updateProfile({
           displayName: name
         }).then(function() {
-         console.log('success added name')
+          const newUserInfo = {...user};
+          newUserInfo.error='';
+          newUserInfo.success=true;
+         setUser(newUserInfo);
+         updateUserName(user.name);
+         setloggedInUser(newUserInfo);
+        //  history.replace(from)
+         
         }).catch(function(error) {
          console.log(error)
         });
@@ -147,9 +156,7 @@ const LogIn = () => {
         firebase.initializeApp(firebaseConfig);
     }
 
-    const history = useHistory();
-    const location = useLocation();
-    const { from } = location.state || { from: { pathname: "/" } };
+   
 
     return (
 
