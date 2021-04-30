@@ -41,7 +41,7 @@ function App() {
           </PrivateRoute>
         
 
-          <PrivateRoute  path="/Destination/:ticketType">
+          <PrivateRoute  path="/Destination/:id">
             <Destination></Destination>
           </PrivateRoute>
 

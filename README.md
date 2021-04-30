@@ -1,5 +1,14 @@
-this is a ride share website.this is my first ridesharing website ..i did my best for done this assignment ,but i cant.
+This is a ride share website.
 
-in this website i used googlemap,privateRouting,firebaseAuthentication and many other things ..i hope it will give me inspire for working hard in future.thnq
+people can buy ticket for bus,bike and train from here.
+
+This is totally online ticket selling service
+
+This is my first ridesharing website .
+
+I did my best for done this project
+
+In this website i used googlemap,privateRouting,firebaseAuthentication and many other things.
+
 
 live link :https://city-rider-4e5ce.firebaseapp.com/

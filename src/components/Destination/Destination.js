@@ -8,7 +8,8 @@ import peopleIcon from '../../peopleicon.png';
 
 
 const Destination = (props) => {
-    const { ticketType } = useParams();
+    const {name} = useParams();
+    console.log(name)
     const vehicles = Data;
     const [loggedInUser, setloggedInUser] = useContext(UserContext);
     const [data, setData] = useState([]);
@@ -19,22 +20,24 @@ const Destination = (props) => {
     
 
     useEffect(() => {
+       
         setData(vehicles);
-        // console.log(vehicles);
 
     }, [data]);
-
-     var index =  data.findIndex(item => item.ticketType === item.ticketType);
-     const picture=(data[index]);
-   
+    // var index =  data.findIndex(item => item.id === id);
+    // const picture=(data[id]);
+     
+    var result=data.find(item => item.id===id)
+    
+      console.log(result)
+     
    
 
 
     return (
-        <div className="container mt-5">
+        // <div className="container mt-5">
             <div className="row">
                 <div className="col-md-8"className="form-makeup">
-
                     {
                        
                         show ? <form>
@@ -56,9 +59,9 @@ const Destination = (props) => {
                         <input style={{width:'220px'}} type="datetime-local" id="time" name="time"></input><br></br>
                     <button style={{marginBottom:'10px'}} onClick={() => setShow(!show)} >Search</button>
                     <br></br>
-                    <div className="d-flex  ticket-design" >
+                    {/* <div className="d-flex  ticket-design" > */}
                         
-                    {
+                    {/* {
                         show ? '' : <img height="70" width="120" src={picture.image} /> 
                         
                     }
@@ -116,7 +119,7 @@ const Destination = (props) => {
                        
                       
                         </div> 
-                </div>
+                </div> */}
                <div className="col-md-4 googleMap">
                    <iframe width="400" height="300" frameborder="0" scrolling="no"
                    marginHeight="0" marginWidth="0" id="gmap canvas" src="https://maps.google.com/maps?width&amp;height=400&amp;h1=en&amp;q=%20dhaka+(Map)&amp;t=&amp;
